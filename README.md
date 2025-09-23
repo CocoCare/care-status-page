@@ -75,3 +75,5 @@ Main difference between this project and fettle are:
 - It doesn't commit the status log, instead it is stored as an artifact.
 - You can set up your health urls as a secret by using [`repository secrets`](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).
 - You can host it in any GitHub pages. You [don't need a custom url](https://github.com/mehatab/fettle/issues/20).
+
+test
