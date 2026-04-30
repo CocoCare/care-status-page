@@ -51,7 +51,7 @@ jobs:
         id: metrics
         env:
           SOURCES: |
-            Portal->https://portal.cococare.io
+            Portal->https://portal.cococare.io/en/auth
             APIs->https://api.rokokocare.com/auth/health
             Mobile App->https://api.rokokocare.com/auth/health
           GITHUB_TOKEN: ${{ github.token }}
