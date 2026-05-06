@@ -8,7 +8,7 @@
 	export let data: PageData;
 </script>
 
-<div class="w-full bg-accent header min-h-[20vh] lg:min-h-[25vh] flex items-end justify-center">
+<div class="w-full bg-base-200 header min-h-[20vh] lg:min-h-[25vh] flex items-end justify-center">
 	<div class="h-full w-full mx-2 md:mx-12">
 		<System systems={data.statusLog} />
 	</div>
@@ -28,6 +28,6 @@
 <style lang="postcss">
 	.header {
 		height: 100%;
-		background: linear-gradient(180deg, theme('colors.accent') 60%, transparent 40%);
+		background: linear-gradient(180deg, theme('colors.base-200') 60%, transparent 40%);
 	}
 </style>
