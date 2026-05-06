@@ -31,11 +31,8 @@ export function loadStatusReport(): Array<[string, Status[]]> {
 				// If it happened in the same day, we check if the status is different:
 				// Unless that we have an error, if so we report the error as existing at EOD
 				if (currentStatus !== StatusCode.ERROR && currentStatus !== (event.result ? 0 : 1)) {
-					// If the currentStatus was OK, but the new event is not OK, we set as unstable because it got fixed
-					// (The `event` object is an event that happened BEFORE the current status so the event was fixed)
-					if (currentStatus === StatusCode.OK) {
-						current[1] = StatusCode.UNSTABLE;
-					}
+					// If current status is OK but previous event was an error, keep it as OK instead of marking as unstable
+					// This prevents showing yellow for recovered services
 					// For any other case we will keep the event from EOD
 				}
 			} else {
